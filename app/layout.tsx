@@ -28,7 +28,7 @@ const playfairDisplay = Playfair_Display({
 
 // CHANGE: Enhanced metadata with comprehensive SEO fields
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vivekmalhan-cb919.web.app'),
+  metadataBase: new URL('https://vivekmalhan-cb919.vercel.app/'),
   title: {
     default: `${profileData.name} — ${profileData.title}`,
     template: `%s | ${profileData.name}`,
@@ -52,23 +52,24 @@ export const metadata: Metadata = {
     "Node.js Developer",
     profileData.name,
     "Vivek Malhan",
+    "vivek",
     "Software Engineer India",
     "Delhi NCR Developer",
   ],
-  authors: [{ name: profileData.name, url: 'https://vivekmalhan-cb919.web.app' }],
+  authors: [{ name: profileData.name, url: 'https://vivekmalhan-cb919.vercel.app/' }],
   creator: profileData.name,
   publisher: profileData.name,
   
   // CHANGE: Add alternates for canonical URL
   alternates: {
-    canonical: 'https://vivekmalhan-cb919.web.app',
+    canonical: 'https://vivekmalhan-cb919.vercel.app/',
   },
   
   // CHANGE: Enhanced Open Graph metadata
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: 'https://vivekmalhan-cb919.web.app',
+    url: 'https://vivekmalhan-cb919.vercel.app/',
     title: `${profileData.name} — ${profileData.title}`,
     description: profileData.bio,
     siteName: `${profileData.name}'s Portfolio`,
@@ -97,7 +98,7 @@ export const metadata: Metadata = {
   
   // CHANGE: Add verification for search consoles
   verification: {
-    google: 'google6a7801330ab3689a.html', // Get from Google Search Console
+    google: '8pr66LmXLtIoOTWtBgiAlGA-rn9sa2iFuvmfcVc19Lk' // Get from Google Search Console
   },
   
   // CHANGE: Add category for better classification
@@ -110,13 +111,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://vivekmalhan-cb919.web.app/#person",
+      "@id": "https://vivekmalhan-cb919.vercel.app/#person",
       name: profileData.name,
       jobTitle: profileData.title,
       description: profileData.bio,
       email: profileData.email,
-      url: "https://vivekmalhan-cb919.web.app/",
-      image: "https://vivekmalhan-cb919.web.app/images/vivek.png",
+      url: "https://vivekmalhan-cb919.vercel.app/",
+      image: "https://vivekmalhan-cb919.vercel.app/images/vivek.png",
       sameAs: [
         "https://www.linkedin.com/in/vivek-malhan-156984195/",
         "https://github.com/VivekMalhan666",
@@ -148,36 +149,36 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://vivekmalhan-cb919.web.app/#website",
-      url: "https://vivekmalhan-cb919.web.app/",
+      "@id": "https://vivekmalhan-cb919.vercel.app/#website",
+      url: "https://vivekmalhan-cb919.vercel.app/",
       name: `${profileData.name}'s Portfolio`,
       description: profileData.bio,
       publisher: {
-        "@id": "https://vivekmalhan-cb919.web.app/#person"
+        "@id": "https://vivekmalhan-cb919.vercel.app/#person"
       },
       inLanguage: "en-IN",
     },
     {
       "@type": "WebPage",
-      "@id": "https://vivekmalhan-cb919.web.app/#webpage",
-      url: "https://vivekmalhan-cb919.web.app/",
+      "@id": "https://vivekmalhan-cb919.vercel.app/#webpage",
+      url: "https://vivekmalhan-cb919.vercel.app/",
       name: `${profileData.name} — ${profileData.title}`,
       isPartOf: {
-        "@id": "https://vivekmalhan-cb919.web.app/#website"
+        "@id": "https://vivekmalhan-cb919.vercel.app/#website"
       },
       about: {
-        "@id": "https://vivekmalhan-cb919.web.app/#person"
+        "@id": "https://vivekmalhan-cb919.vercel.app/#person"
       },
       description: profileData.bio,
       inLanguage: "en-IN",
     },
     {
       "@type": "ProfilePage",
-      "@id": "https://vivekmalhan-cb919.web.app/#profilepage",
-      url: "https://vivekmalhan-cb919.web.app/",
+      "@id": "https://vivekmalhan-cb919.vercel.app/#profilepage",
+      url: "https://vivekmalhan-cb919.vercel.app/",
       name: `${profileData.name}'s Professional Portfolio`,
       mainEntity: {
-        "@id": "https://vivekmalhan-cb919.web.app/#person"
+        "@id": "https://vivekmalhan-cb919.vercel.app/#person"
       },
     },
   ],
