@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Core Stack",
+    "icon": "⚛️",
+    "description": "The primary tools I build everything with",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5 & CSS3",
+      "Tailwind CSS",
+      "Python",
+      "Langchain",
+      "LLMs",
+      "AI Agents",
+      "AI"
+    ]
+  },
+  {
+    "category": "Mobile & Cross-Platform",
+    "icon": "📱",
+    "description": "Taking experiences beyond the browser",
+    "skills": ["React Native", "Expo", "PWAs"]
+  },
+  {
+    "category": "Backend & Data",
+    "icon": "🔧",
+    "description": "Full-stack capabilities that round out the experience",
+    "skills": [
+      "Node.js",
+      "Nest.js",
+      "Express.js",
+      "GraphQL",
+      "MongoDB",
+      "Firebase",
+      "AWS",
+      "REST APIs"
+    ]
+  },
+  {
+    "category": "Craft & Tooling",
+    "icon": "🛠️",
+    "description": "How I ship with quality and confidence",
+    "skills": [
+      "RAG",
+      "Vector Databases",
+      "Git & GitHub",
+      "Webpack",
+      "Micro Frontends",
+      "Analytics Integration",
+      "Stripe API"
+    ]
+  },
+  {
+    "category": "Content & Community",
+    "icon": "✍️",
+    "description": "Sharing knowledge beyond the codebase",
+    "skills": [
+      "Technical Writing",
+      "YouTube Content Creation",
+      "Open Source (NPM)",
+      "Mentoring",
+      "Code Reviews"
+    ]
+  }
+]

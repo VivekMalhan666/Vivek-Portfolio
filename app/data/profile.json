@@ -1,0 +1,41 @@
+{
+  "name": "Vivek Malhan",
+  "title": "Full Cycle Developer",
+  "tagline": "Developer · Blogger · YouTuber",
+  "bio": "I'm a Full Cycle Developer at Publicis Sapient with 5+ years of hands-on experience crafting high-performance web and mobile applications. Passionate about Generative AI, AI Agents, AI Workflows, React ecosystems, and pushing the boundaries of what's possible on the web. When I'm not coding, I'm creating content — writing on Medium, making videos on YouTube, and sharing what I learn.",
+  "location": "India",
+  "email": "amalhan43@gmail.com",
+  "avatar": "/images/vivek.png",
+  "social": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/VivekMalhan666",
+      "label": "GitHub profile"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/vivek-malhan-156984195/",
+      "label": "LinkedIn profile"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/@vivekmalhan",
+      "label": "YouTube channel"
+    },
+    {
+      "platform": "Medium",
+      "url": "https://medium.com/@amalhan43",
+      "label": "Medium blog"
+    },
+    {
+      "platform": "NPM",
+      "url": "https://www.npmjs.com/~vivekmalhan",
+      "label": "NPM packages"
+    },
+    {
+      "platform": "Codepen",
+      "url": "https://codepen.io/vivekmalhan666/collections/",
+      "label": "CodePen collections"
+    }
+  ]
+}

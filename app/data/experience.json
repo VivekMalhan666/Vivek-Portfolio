@@ -1,0 +1,96 @@
+[
+  {
+    "id": "exp-1",
+    "company": "Publicis Sapient",
+    "role": "Experience Engineer Level 2",
+    "type": "Full-time",
+    "startDate": "2021-10",
+    "endDate": null,
+    "location": "India (Remote)",
+    "bullets": [
+      {
+        "text": "Engineered scalable, responsive, and accessible web solutions using React.js, Next.js, and TypeScript, ensuring optimal performance and user engagement across devices."
+      },
+      {
+        "text": "Spearheaded the development and maintenance of various robust retail e-commerce ecosystems integrating multiple payment gateways, analytics frameworks, and RESTful APIs."
+      },
+      {
+        "text": "Pioneered the integration of Generative AI and AI Agents into client applications, creating intelligent, context-aware user experiences that enhanced engagement and efficiency."
+      },
+      {
+        "text": "Contributed to the InnerSource R&D initiative—developing reusable frameworks, npm packages, and AI-powered engineering accelerators to improve team productivity."
+      },
+      {
+        "text": "Drove analytics integration across products, becoming the go-to person for app and web analytics."
+      }
+    ],
+    "technologies": [
+      "React",
+      "Next.js",
+      "React Native",
+      "Generative AI",
+      "TypeScript",
+      "Analytics"
+    ]
+  },
+  {
+    "id": "exp-2",
+    "company": "Ryazio Technologies LLP",
+    "role": "React Specialist & Development Intern",
+    "type": "Internship",
+    "startDate": "2021-02",
+    "endDate": "2021-07",
+    "location": "Remote",
+    "bullets": [
+      {
+        "text": "Built and shipped user-facing features using React, Express, and Firebase with a focus on performance."
+      },
+      {
+        "text": "Integrated AWS services and Stripe payment gateway into production applications."
+      },
+      {
+        "text": "Collaborated closely with senior engineers to deliver features on tight timelines."
+      }
+    ],
+    "technologies": ["React", "Express.js", "AWS", "Firebase", "Stripe"]
+  },
+  {
+    "id": "exp-3",
+    "company": "Edulyx — E-Learning",
+    "role": "React Specialist & Development Intern",
+    "type": "Internship",
+    "startDate": "2020-10",
+    "endDate": "2021-01",
+    "location": "Remote",
+    "bullets": [
+      {
+        "text": "Developed e-learning platform features using MongoDB, Node.js, and React."
+      },
+      {
+        "text": "Implemented robust authentication systems and user management flows."
+      },
+      {
+        "text": "Improved student dashboard UX, resulting in higher engagement metrics."
+      }
+    ],
+    "technologies": ["React", "Node.js", "MongoDB", "Authentication"]
+  },
+  {
+    "id": "exp-4",
+    "company": "Great Developers",
+    "role": "Frontend Intern",
+    "type": "Internship",
+    "startDate": "2020-08",
+    "endDate": "2020-09",
+    "location": "Remote",
+    "bullets": [
+      {
+        "text": "Built responsive landing pages and marketing sites using HTML, CSS, and JavaScript."
+      },
+      {
+        "text": "Gained foundational experience in frontend development workflows and best practices."
+      }
+    ],
+    "technologies": ["HTML", "CSS", "JavaScript"]
+  }
+]

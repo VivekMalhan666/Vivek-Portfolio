@@ -1,26 +1,394 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Design Tokens — Cinematic Midnight Palette
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background */
+  --color-bg-primary: #09090f;
+  --color-bg-secondary: #0f0f1a;
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.055);
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-accent: rgba(232, 201, 126, 0.25);
+
+  /* Text */
+  --color-text-primary: #f0ece3;
+  --color-text-secondary: #9a93a8;
+  --color-text-muted: #5a5470;
+
+  /* Accents — warm gold + soft violet */
+  --color-accent-gold: #e8c97e;
+  --color-accent-violet: #9b72cf;
+  --color-accent-rose: #d97b8a;
+  --color-accent-teal: #6fcfc8;
+  --color-accent-glow-gold: rgba(232, 201, 126, 0.12);
+  --color-accent-glow-violet: rgba(155, 114, 207, 0.12);
+
+  /* Typography Scale — fluid */
+  --font-size-xs: clamp(0.7rem, 0.85vw, 0.75rem);
+  --font-size-sm: clamp(0.85rem, 1vw, 0.9rem);
+  --font-size-base: clamp(1rem, 1.1vw, 1.05rem);
+  --font-size-lg: clamp(1.1rem, 1.3vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.8vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 2.5vw, 2rem);
+  --font-size-3xl: clamp(2rem, 4vw, 3.25rem);
+  --font-size-4xl: clamp(2.75rem, 6vw, 5rem);
+  --font-size-hero: clamp(3.25rem, 8vw, 7rem);
+
+  /* Cinematic spacing */
+  --section-padding: clamp(5rem, 12vw, 10rem);
+  --content-max-width: 1120px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 40px;
+  --radius-full: 9999px;
+
+  /* Shadows — cinematic, warm */
+  --shadow-glow-gold: 0 0 60px rgba(232, 201, 126, 0.08);
+  --shadow-glow-violet: 0 0 60px rgba(155, 114, 207, 0.08);
+  --shadow-card: 0 2px 40px rgba(0, 0, 0, 0.5);
+  --shadow-elevated: 0 8px 64px rgba(0, 0, 0, 0.7);
+  --shadow-photo: 0 0 80px rgba(155, 114, 207, 0.25), 0 0 160px rgba(232, 201, 126, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   Tailwind Theme Extension (v4 @theme)
+   ============================================================ */
+@theme {
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-accent-gold: var(--color-accent-gold);
+  --color-accent-violet: var(--color-accent-violet);
+  --color-accent-teal: var(--color-accent-teal);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-jetbrains);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================================
+   Global Reset & Base Styles
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* Cinematic page noise overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.35;
+}
+
+/* Ambient background gradient blobs */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(155, 114, 207, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(232, 201, 126, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.font-serif { font-family: var(--font-playfair), Georgia, serif; }
+.font-sans  { font-family: var(--font-inter), system-ui, sans-serif; }
+.font-mono  { font-family: var(--font-jetbrains), monospace; }
+
+/* ============================================================
+   Section Layout
+   ============================================================ */
+.section-wrapper {
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  z-index: 2;
+}
+
+.content-container {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.5rem, 5vw, 3rem);
+  padding-right: clamp(1.5rem, 5vw, 3rem);
+}
+
+/* ============================================================
+   Cinematic Cards
+   ============================================================ */
+.glass-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+}
+
+.glass-card:hover {
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-border-accent);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   Accent Text & Gradient
+   ============================================================ */
+.text-accent-gold {
+  color: var(--color-accent-gold);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-accent-gold) 0%, var(--color-accent-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-warm {
+  background: linear-gradient(135deg, #f0ece3 0%, var(--color-accent-gold) 60%, var(--color-accent-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================================================
+   Skill Pill Tags
+   ============================================================ */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  background: rgba(232, 201, 126, 0.07);
+  border: 1px solid rgba(232, 201, 126, 0.15);
+  color: var(--color-accent-gold);
+  letter-spacing: 0.01em;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.skill-pill:hover {
+  background: rgba(232, 201, 126, 0.13);
+  border-color: rgba(232, 201, 126, 0.3);
+}
+
+/* ============================================================
+   Section Headings
+   ============================================================ */
+.section-eyebrow {
+  font-size: var(--font-size-xs);
+  font-family: var(--font-jetbrains), monospace;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  max-width: 55ch;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-violet));
+  color: #09090f;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 24px rgba(232, 201, 126, 0.2);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(232, 201, 126, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.02em;
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-border-accent);
+  background: var(--color-bg-card);
+}
+
+/* ============================================================
+   Timeline
+   ============================================================ */
+.timeline-line {
+  position: absolute;
+  left: 1.25rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-border) 10%,
+    var(--color-border) 90%,
+    transparent
+  );
+}
+
+.timeline-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--color-accent-gold);
+  box-shadow: 0 0 0 3px rgba(232, 201, 126, 0.15), 0 0 12px rgba(232, 201, 126, 0.3);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Scrollbar Styling
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-bg-primary); }
+::-webkit-scrollbar-thumb {
+  background: rgba(232, 201, 126, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(232, 201, 126, 0.35); }
+
+/* ============================================================
+   Focus Styles (Accessibility)
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-accent-gold);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   Selection
+   ============================================================ */
+::selection {
+  background: rgba(232, 201, 126, 0.2);
+  color: var(--color-text-primary);
+}
+
+/* ============================================================
+   Utility: Divider
+   ============================================================ */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-border) 20%,
+    var(--color-border) 80%,
+    transparent
+  );
+  margin: 0 auto;
+  max-width: var(--content-max-width);
+}
+
+/* ============================================================
+   Blob animation for photo
+   ============================================================ */
+@keyframes blob-morph {
+  0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50%  { border-radius: 50% 60% 30% 60% / 40% 70% 60% 30%; }
+  75%  { border-radius: 40% 60% 60% 30% / 60% 40% 30% 50%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.7; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }

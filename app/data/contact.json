@@ -1,0 +1,26 @@
+{
+  "email": "hello@alexcarter.dev",
+  "availability": "Open to new opportunities and interesting projects.",
+  "social": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/alexcarter",
+      "label": "GitHub profile"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/alexcarter",
+      "label": "LinkedIn profile"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/alexcarter",
+      "label": "Twitter profile"
+    },
+    {
+      "platform": "Dribbble",
+      "url": "https://dribbble.com/alexcarter",
+      "label": "Dribbble portfolio"
+    }
+  ]
+}

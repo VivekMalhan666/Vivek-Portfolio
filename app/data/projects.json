@@ -1,0 +1,76 @@
+[
+  {
+    "id": "project-1",
+    "title": "react-toasties",
+    "description": "A lightweight, customizable toast notification library for React. Zero dependencies, fully accessible, and developer-friendly.",
+    "longDescription": "Built and published an NPM package that brings elegant, accessible toast notifications to any React project. Features customizable duration, positioning, types (success/error/info/warning), and a minimal API surface. Downloaded by developers worldwide.",
+    "tags": ["React", "NPM Package", "Open Source", "Accessibility"],
+    "image": "/images/projects/react-toasties.jpg",
+    "links": [
+      { "label": "NPM", "url": "https://www.npmjs.com/~vivekmalhan", "type": "live" },
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+    ],
+    "featured": true
+  },
+  {
+    "id": "project-2",
+    "title": "react-comboboxes",
+    "description": "Accessible, composable combobox components for React — built with WAI-ARIA patterns and zero runtime dependencies.",
+    "longDescription": "A published NPM package providing headless combobox/autocomplete components following WAI-ARIA design patterns. Fully composable, keyboard navigable, and designed for real-world form use cases. Works seamlessly with any design system.",
+    "tags": ["React", "NPM Package", "WAI-ARIA", "Accessibility", "Open Source"],
+    "image": "/images/projects/react-comboboxes.jpg",
+    "links": [
+      { "label": "NPM", "url": "https://www.npmjs.com/~vivekmalhan", "type": "live" },
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+    ],
+    "featured": true
+  },
+  {
+    "id": "project-3",
+    "title": "Airbnb Clone",
+    "description": "A full-stack Airbnb clone with real-time search, property listings, booking flows, and authentication.",
+    "longDescription": "A production-grade Airbnb replica built with React and Firebase. Features property search with geo-filters, user authentication, booking management, and a responsive mobile-first UI. Demonstrates real-world CRUD patterns and state management.",
+    "tags": ["React", "Firebase", "Google Maps API", "CSS Modules"],
+    "image": "/images/projects/airbnb-clone.jpg",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+    ],
+    "featured": true
+  },
+  {
+    "id": "project-4",
+    "title": "Instagram Clone",
+    "description": "A social media app clone featuring real-time posts, stories, likes, comments, and Firebase-powered auth.",
+    "longDescription": "Full-featured Instagram replica with React and Firebase Realtime Database. Supports image uploads, real-time feed updates, user authentication, and infinite scroll. Styled to match Instagram's design language.",
+    "tags": ["React", "Firebase", "Storage", "Real-time"],
+    "image": "/images/projects/instagram-clone.jpg",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+    ],
+    "featured": false
+  },
+  {
+    "id": "project-5",
+    "title": "Signal Clone",
+    "description": "End-to-end encrypted messaging app clone with real-time chat, group messaging, and push notifications.",
+    "longDescription": "A Signal-inspired messaging application built with React Native and Firebase. Features real-time messaging via Firestore, group chats, push notifications, and a clean privacy-first UI. Works across iOS and Android.",
+    "tags": ["React Native", "Firebase", "Real-time", "Push Notifications"],
+    "image": "/images/projects/signal-clone.jpg",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+    ],
+    "featured": false
+  },
+  {
+    "id": "project-6",
+    "title": "Uber Clone",
+    "description": "A ride-hailing app clone with real-time maps, driver tracking, fare calculation, and booking flows.",
+    "longDescription": "A React Native Uber clone powered by Google Maps API and Firebase. Features real-time driver location tracking, route calculation, fare estimation, and multi-step booking UI. Demonstrates complex map interactions and state management in mobile apps.",
+    "tags": ["React Native", "Google Maps", "Firebase", "Expo"],
+    "image": "/images/projects/uber-clone.jpg",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+    ],
+    "featured": false
+  }
+]
