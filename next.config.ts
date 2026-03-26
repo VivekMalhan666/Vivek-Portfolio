@@ -7,39 +7,16 @@ const nextConfig: NextConfig = {
   // CHANGE: Add trailing slashes for consistent URLs
   trailingSlash: true,
 
-  // CHANGE: Enable image optimization
+  // CHANGE: Disable image optimization (required for static export)
   images: {
-    unoptimized: false,
-    formats: ["image/avif", "image/webp"],
-    deviceSizes: [425, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    unoptimized: true,
   },
 
   // CHANGE: Compress output for faster loading
   compress: true,
 
-  // CHANGE: Generate sitemap and robots.txt
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "X-DNS-Prefetch-Control",
-            value: "on",
-          },
-          {
-            key: "Strict-Transport-Security",
-            value: "max-age=63072000; includeSubDomains; preload",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-        ],
-      },
-    ];
-  },
+  // CHANGE: Removed async headers() - not compatible with output: "export"
+  // Configure headers at your hosting provider level instead (Firebase hosting.json, Vercel vercel.json, etc.)
 };
 
 export default nextConfig;

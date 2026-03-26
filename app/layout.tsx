@@ -97,9 +97,7 @@ export const metadata: Metadata = {
   
   // CHANGE: Add verification for search consoles
   verification: {
-    google: 'your-google-verification-code', // Get from Google Search Console
-    yandex: 'your-yandex-verification-code',
-    bing: 'your-bing-verification-code',
+    google: 'google6a7801330ab3689a.html', // Get from Google Search Console
   },
   
   // CHANGE: Add category for better classification

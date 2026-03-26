@@ -172,8 +172,7 @@ export function SkillsSection() {
               lineHeight: 1.6,
             }}
           >
-            "The best code is written with empathy — for the user, the team, and the next developer
-            who reads it."
+            “The best code is written with empathy — for the user, the team, and the next developer who reads it.”
           </p>
         </motion.div>
       </div>
