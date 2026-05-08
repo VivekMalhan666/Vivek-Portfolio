@@ -137,10 +137,6 @@ const jsonLd = {
         "Web Development",
         "Mobile Development",
       ],
-      alumniOf: {
-        "@type": "Organization",
-        name: "Your University Name", // Add your university
-      },
       worksFor: {
         "@type": "Organization",
         name: "Publicis Sapient",

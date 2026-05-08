@@ -8,7 +8,7 @@
     "image": "/images/projects/react-toasties.jpg",
     "links": [
       { "label": "NPM", "url": "https://www.npmjs.com/~vivekmalhan", "type": "live" },
-      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666/Toasts-library", "type": "github" }
     ],
     "featured": true
   },
@@ -21,38 +21,38 @@
     "image": "/images/projects/react-comboboxes.jpg",
     "links": [
       { "label": "NPM", "url": "https://www.npmjs.com/~vivekmalhan", "type": "live" },
-      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666/npm-package-combobox", "type": "github" }
     ],
     "featured": true
   },
   {
     "id": "project-3",
-    "title": "Airbnb Clone",
-    "description": "A full-stack Airbnb clone with real-time search, property listings, booking flows, and authentication.",
+    "title": "rag-beginner-guide",
+    "description": "This repository is a hands-on, beginner-friendly guide to building a Retrieval-Augmented Generation (RAG) system from scratch using Python. No theory overload. No black-box magic. Just real code, real debugging, and real GenAI engineering.",
     "longDescription": "A production-grade Airbnb replica built with React and Firebase. Features property search with geo-filters, user authentication, booking management, and a responsive mobile-first UI. Demonstrates real-world CRUD patterns and state management.",
-    "tags": ["React", "Firebase", "Google Maps API", "CSS Modules"],
+    "tags": ["pyhton", "rag", "langchain", "FAISS"],
     "image": "/images/projects/airbnb-clone.jpg",
     "links": [
-      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666/rag-beginner-guide", "type": "github" }
     ],
     "featured": true
   },
   {
     "id": "project-4",
-    "title": "Instagram Clone",
-    "description": "A social media app clone featuring real-time posts, stories, likes, comments, and Firebase-powered auth.",
+    "title": "webpush-notifications",
+    "description": "This repository contains a proof of concept (POC) for implementing browser popup notifications using Web Push",
     "longDescription": "Full-featured Instagram replica with React and Firebase Realtime Database. Supports image uploads, real-time feed updates, user authentication, and infinite scroll. Styled to match Instagram's design language.",
     "tags": ["React", "Firebase", "Storage", "Real-time"],
     "image": "/images/projects/instagram-clone.jpg",
     "links": [
-      { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
+      { "label": "GitHub", "url": "https://github.com/VivekMalhan666/webpush-notifications", "type": "github" }
     ],
     "featured": false
   },
   {
     "id": "project-5",
-    "title": "Signal Clone",
-    "description": "End-to-end encrypted messaging app clone with real-time chat, group messaging, and push notifications.",
+    "title": "https://github.com/VivekMalhan666/custom-react-hooks",
+    "description": "This repository contains some of the most useful custom react hooks that will enhance your overall react development period by reducing your time consumption. These hooks will definitly help make your project easier.",
     "longDescription": "A Signal-inspired messaging application built with React Native and Firebase. Features real-time messaging via Firestore, group chats, push notifications, and a clean privacy-first UI. Works across iOS and Android.",
     "tags": ["React Native", "Firebase", "Real-time", "Push Notifications"],
     "image": "/images/projects/signal-clone.jpg",
