@@ -42,7 +42,7 @@
     "title": "webpush-notifications",
     "description": "This repository contains a proof of concept (POC) for implementing browser popup notifications using Web Push",
     "longDescription": "Full-featured Instagram replica with React and Firebase Realtime Database. Supports image uploads, real-time feed updates, user authentication, and infinite scroll. Styled to match Instagram's design language.",
-    "tags": ["React", "Firebase", "Storage", "Real-time"],
+    "tags": ["React", "Firebase", "Real-time"],
     "image": "/images/projects/instagram-clone.jpg",
     "links": [
       { "label": "GitHub", "url": "https://github.com/VivekMalhan666/webpush-notifications", "type": "github" }
@@ -51,10 +51,10 @@
   },
   {
     "id": "project-5",
-    "title": "https://github.com/VivekMalhan666/custom-react-hooks",
+    "title": "custom-react-hooks",
     "description": "This repository contains some of the most useful custom react hooks that will enhance your overall react development period by reducing your time consumption. These hooks will definitly help make your project easier.",
     "longDescription": "A Signal-inspired messaging application built with React Native and Firebase. Features real-time messaging via Firestore, group chats, push notifications, and a clean privacy-first UI. Works across iOS and Android.",
-    "tags": ["React Native", "Firebase", "Real-time", "Push Notifications"],
+    "tags": ["React", "custom hooks"],
     "image": "/images/projects/signal-clone.jpg",
     "links": [
       { "label": "GitHub", "url": "https://github.com/VivekMalhan666", "type": "github" }
